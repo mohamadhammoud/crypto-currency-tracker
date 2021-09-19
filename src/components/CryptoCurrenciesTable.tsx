@@ -88,7 +88,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'current_price',
             key: 'current_price',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 75 }}> $ {value.toFixed(2).toLocaleString()}</div>,
+            render: (value: number, row: any) => <div style={{ width: 100 }}> $ {value.toFixed(2).toLocaleString()}</div>,
             sorter: (a: any, b: any) => a.current_price - b.current_price,
         },
         {
@@ -100,10 +100,10 @@ const CryptoCurrenciesTable = (props: IProps) => {
             // #ea3943
             //   #16c784
             render: (value: number, row: any) =>
-                <>
+                <div style={{ width: 75 }}>
                     {value < 0 ? <span style={{ color: "#ea3943" }}><CaretDownFilled translate={undefined} />{value.toFixed(2).toLocaleString()}%</span> :
                         <span style={{ color: "#16c784" }}><CaretUpFilled translate={undefined} /> {value.toFixed(2).toLocaleString()}%</span>
-                    }  </>,
+                    }  </div>,
             sorter: (a: any, b: any) => a.price_change_percentage_24h - b.price_change_percentage_24h,
         },
         {
@@ -116,7 +116,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'market_cap',
             key: 'market_cap',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 200 }}> $ {value}</div>,
+            render: (value: number, row: any) => <div style={{ width: 220 }}> $ {value}</div>,
             sorter: (a: any, b: any) => a.market_cap - b.market_cap,
         },
         {
@@ -142,7 +142,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'circulating_supply',
             key: 'circulating_supply',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 220 }}> $ {value}</div>,
+            render: (value: number, row: any) => <div style={{ width: 240 }}> $ {value}</div>,
             sorter: (a: any, b: any) => a.circulating_supply - b.circulating_supply,
         },
     ] as any;
