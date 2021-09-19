@@ -52,7 +52,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             key: 'name',
             render: (value: number, row: any) => <>
                 <Row justify="start" style={{ width: 400 }}>
-                    <Col xs={{ span: 12 }}>
+                    <Col xs={{ span: 11 }}>
                         {
                             row.image ?
                                 <> <img src={row.image} alt="image" className="img-table-crypto-currency" /> &nbsp;</>
@@ -60,12 +60,12 @@ const CryptoCurrenciesTable = (props: IProps) => {
                         }
                         {value}
                     </Col>
-                    <Col xs={{ span: 4 }}>
+                    <Col xs={{ span: 3 }}>
                         <span style={{ color: "rgb(128, 138, 157)" }}>
                             {row.symbol.toUpperCase()}
                         </span>
                     </Col>
-                    <Col xs={{ offset: 2, span: 4 }}>
+                    <Col xs={{ span: 10 }}>
                         <Button
                             type="primary"
                             shape="round"
