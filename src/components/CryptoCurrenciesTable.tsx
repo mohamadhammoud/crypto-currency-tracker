@@ -51,7 +51,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'name',
             key: 'name',
             render: (value: number, row: any) => <>
-                <Row justify="start" style={{ width: 400 }}>
+                <Row justify="start" style={{ width: 450 }}>
                     <Col xs={{ span: 11 }}>
                         {
                             row.image ?
