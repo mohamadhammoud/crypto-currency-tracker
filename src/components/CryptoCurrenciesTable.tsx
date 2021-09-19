@@ -88,7 +88,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'current_price',
             key: 'current_price',
             align: 'center',
-            render: (value: number, row: any) => <> $ {value.toFixed(2).toLocaleString()}</>,
+            render: (value: number, row: any) => <div style={{ width: 75 }}> $ {value.toFixed(2).toLocaleString()}</div>,
             sorter: (a: any, b: any) => a.current_price - b.current_price,
         },
         {
@@ -116,7 +116,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'market_cap',
             key: 'market_cap',
             align: 'center',
-            render: (value: number, row: any) => <> $ {value}</>,
+            render: (value: number, row: any) => <div style={{ width: 200 }}> $ {value}</div>,
             sorter: (a: any, b: any) => a.market_cap - b.market_cap,
         },
         {
@@ -129,7 +129,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'total_volume',
             key: 'total_volume',
             align: 'center',
-            render: (value: number, row: any) => <> $ {value}</>,
+            render: (value: number, row: any) => <div style={{ width: 150 }}> $ {value}</div>,
             sorter: (a: any, b: any) => a.total_volume - b.total_volume,
         },
         {
@@ -142,7 +142,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'circulating_supply',
             key: 'circulating_supply',
             align: 'center',
-            render: (value: number, row: any) => <> $ {value}</>,
+            render: (value: number, row: any) => <div style={{ width: 220 }}> $ {value}</div>,
             sorter: (a: any, b: any) => a.circulating_supply - b.circulating_supply,
         },
     ] as any;
@@ -152,7 +152,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
 
             <div className={props.className}>
                 <div className="margin-top-10 margin-bottom-10">
-                    <span className='header-label'> {props.title} :</span> &nbsp;
+                    <span className='header-label'> {props.title}:</span>
                     <Input onChange={(e: any) => {
                         props.searchMethod(e.target.value);
                     }} style={{ width: 250, borderRadius: 30 }} />
