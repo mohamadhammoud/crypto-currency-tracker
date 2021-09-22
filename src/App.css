@@ -1,7 +1,7 @@
 :root {
   --blue: #3861fb;
   --header-label: #58667e;
-  --select-background: #a6b0c3;
+  --select-background: white;
 }
 * {
   font-weight: 600;

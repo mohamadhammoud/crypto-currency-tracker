@@ -133,7 +133,7 @@ const App: React.FC = () => {
               sumOf24hVol={sumOf24hVol}
             />
             <CryptoCurrenciesTable
-              title={t("Favorite Crypto Currecies Menu")}
+              title={t("Favorite Crypto Currencies Menu")}
               cryptoCurrencies={favoriteSearchedCryptoCurrencies.length > 0 ? favoriteSearchedCryptoCurrencies : favoriteCryptoCurrencies}
               searchMethod={searchingForFavoriteCryptoCurrencies}
               switch={switching}
@@ -141,7 +141,7 @@ const App: React.FC = () => {
               className="font-size-15 background-color-gray padding-10 margin-20 box-shadow"
             />
             <CryptoCurrenciesTable
-              title={t("Crypto Currecies Menu")}
+              title={t("Crypto Currencies Menu")}
               cryptoCurrencies={searchedCryptoCurrencies.length > 0 ? searchedCryptoCurrencies : cryptoCurrencies}
               searchMethod={searchingForNormalCryptoCurrencies}
               switch={switching}
