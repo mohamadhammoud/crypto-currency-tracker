@@ -1,7 +1,7 @@
 {
     "English": "Anglaise",
     "French": "français",
-    "Cryptos": "Cryptos",
+    "Crypto Currencies": "Crypto Monnaies",
     "Market Cap": "Capitalisation boursière",
     "24h Vol": "Vol 24h",
     "Switch to/from favorite list": "Basculer vers/depuis la liste des favoris",
@@ -23,5 +23,6 @@
     "24h Low / 24h High": "24h Bas / 24h Haut",
     "Market Rank": "Rang du marché",
     "USD (United States)": "USD (États-Unis)",
-    "Go Back": "Retourner"
+    "Go Back": "Retourner",
+    "Crypto History.": "L'histoire de ces pièces virtuelles commence avec une personne : le cryptographe David Chaum. En 1983, l'Américain a développé un système cryptographique appelé eCash. Douze ans plus tard, il a développé un autre système, DigiCash, qui utilisait la cryptographie pour rendre les transactions économiques confidentielles. Cependant, la première fois que l'idée ou le terme « crypto-monnaie » a été inventé, c'était en 1998. Cette année-là, Wei Dai a commencé à réfléchir au développement d'un nouveau mode de paiement utilisant un système cryptographique et dont la principale caractéristique était la décentralisation."
 }

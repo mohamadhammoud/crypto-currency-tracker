@@ -1,7 +1,7 @@
 {
     "English": "English",
     "French": "French",
-    "Cryptos": "Cryptos",
+    "Crypto Currencies": "Crypto Currencies",
     "Market Cap": "Market Cap",
     "24h Vol": "24h Vol",
     "Switch to/from favorite list": "Switch to/from favorite list",
@@ -23,6 +23,7 @@
     "24h Low / 24h High": "24h Low / 24h High",
     "Market Rank": "Market Rank",
     "USD (United States)": "USD (United States)",
-     "Go Back": "Go Back"
+     "Go Back": "Go Back",
+     "Crypto History." : "The story of these virtual coins begins with one person: the cryptographer David Chaum. In 1983, the American developed a cryptographic system called eCash. Twelve years later, he developed another system, DigiCash, that used cryptography to make economic transactions confidential. However, the first time the idea or term 'cryptocurrency' was coined was in 1998. That year, Wei Dai began to think about developing a new payment method that used a cryptographic system and whose main characteristic was decentralization."
 }
 

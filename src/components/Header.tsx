@@ -19,7 +19,7 @@ const Header = (props: IProps) => {
 
     return (
         <Row justify='start' className='font-size-15 background-color-gray padding-10 margin-20 box-shadow center'>
-            <Col md={{ span: 4 }} xs={{ span: 24 }}> <span className='header-label'> {t("Cryptos")} </span> : <span className='color-blue'> {props.countOfCryptoCurrencies.toLocaleString("en-US")} </span> </Col>
+            <Col md={{ span: 4 }} xs={{ span: 24 }}> <span className='header-label'> {t("Crypto Currencies")} </span> : <span className='color-blue'> {props.countOfCryptoCurrencies.toLocaleString("en-US")} </span> </Col>
             <Col md={{ span: 6 }} xs={{ span: 24 }}> <span className='header-label'> {t("Market Cap")} </span> : <span className='color-blue'> ${props.sumOfMarketCap.toLocaleString("en-US")} </span></Col>
             <Col md={{ span: 6 }} xs={{ span: 24 }}> <span className='header-label'> {t("24h Vol")}</span> : <span className='color-blue'> ${props.sumOf24hVol.toLocaleString("en-US")} </span></Col>
             <Col flex='auto' md={{ offset: 3, span: 4 }} xs={{ span: 24 }}>

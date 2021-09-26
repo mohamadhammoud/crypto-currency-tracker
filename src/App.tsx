@@ -1,11 +1,12 @@
 import { notification } from "antd";
 import React, { useEffect, useState } from "react";
 import { getAllCoins } from "./apis/crypto-currency-api";
-import CryptoCurrenciesTable from "./components/CryptoCurrenciesTable";
+import CryptoCurrenciesTable from "./components/CryptoCurrenciesMain/CryptoCurrenciesTable";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ViewChart from "./components/ViewChart";
 import { useTranslation } from "react-i18next";
+import CryptoCurrencyHistory from "./components/CryptoCurrenciesMain/CryptoCurrencyHistory";
 
 const App: React.FC = () => {
   const { t } = useTranslation();
@@ -112,9 +113,7 @@ const App: React.FC = () => {
   }
 
   useEffect(() => {
-    setInterval(() => {
-      sendingRequest();
-    }, 10000);
+    sendingRequest();
 
   }, []);
 
@@ -122,16 +121,19 @@ const App: React.FC = () => {
   return (
     <>
       <Router>
+        <Header
+          countOfCryptoCurrencies={countOfCryptoCurrencies}
+          sumOfMarketCap={sumOfMarketCap}
+          sumOf24hVol={sumOf24hVol}
+        />
         <Switch>
           <Route path="/chart" exact>
             <ViewChart />
           </Route>
           <Route path="/" >
-            <Header
-              countOfCryptoCurrencies={countOfCryptoCurrencies}
-              sumOfMarketCap={sumOfMarketCap}
-              sumOf24hVol={sumOf24hVol}
-            />
+
+            <CryptoCurrencyHistory />
+
             <CryptoCurrenciesTable
               title={t("Favorite Crypto Currencies Menu")}
               cryptoCurrencies={favoriteSearchedCryptoCurrencies.length > 0 ? favoriteSearchedCryptoCurrencies : favoriteCryptoCurrencies}

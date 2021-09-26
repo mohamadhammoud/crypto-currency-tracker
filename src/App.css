@@ -33,12 +33,19 @@
   background-color: #eff2f5;
 }
 
+/*  */
 .padding-10 {
   padding: 10px;
 }
 
 .font-size-15 {
   font-size: 15px;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+.font-size-30 {
+  font-size: 30px;
 }
 
 .margin-2 {
@@ -93,5 +100,10 @@
 .img-table-crypto-currency {
   height: 24px;
   width: 24px;
+}
+
+.crypto-currency-history {
+  background-image: url(./assets/whiteBg.jpg);
+  padding: 50px 0;
 }
 

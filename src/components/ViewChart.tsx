@@ -33,7 +33,7 @@ const ViewChart_ = ({ currency }: IProps) => {
             let y: any = [];
             chartData.prices.map((price: any) => {
                 const splitDate = new Date(price[0]).toUTCString().split(" ");
-                x.push(`${splitDate[1]}`);
+                x.push(`${splitDate[1]} ${splitDate[2]}`);
                 y.push(Number(price[1]).toFixed(0));
             });
             setLabels((labels) => x);
@@ -76,9 +76,9 @@ const ViewChart_ = ({ currency }: IProps) => {
     const options = {
         //   maintainAspectRatio: false,
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            // y: {
+            //     beginAtZero: true
+            // }
 
         },
     };
@@ -115,11 +115,10 @@ const ViewChart_ = ({ currency }: IProps) => {
                             <div style={{ paddingTop: 10 }}>
                                 {t("Price Change 24h")}
                             </div>
-
                         </Col>
                         <Col span={12} className="right">
                             <div>
-                                $ {currency.price_change_24h} <br />
+                                $ {currency.price_change_24h.toLocaleString('en-US')} <br />
                                 {currency.price_change_percentage_24h < 0 ? <span style={{ color: "#ea3943" }}><CaretDownFilled translate={undefined} />{currency.price_change_percentage_24h.toFixed(2).toLocaleString()}%</span> :
                                     <span style={{ color: "#16c784" }}><CaretUpFilled translate={undefined} /> {currency.price_change_percentage_24h.toFixed(2).toLocaleString()}%</span>}
                             </div>
@@ -134,7 +133,7 @@ const ViewChart_ = ({ currency }: IProps) => {
                         </Col>
                         <Col span={12} className="right">
                             <div>
-                                {currency.high_24h.toFixed(2).toLocaleString()} / {currency.low_24h.toFixed(2).toLocaleString()}
+                                ${currency.high_24h.toLocaleString('en-US')} / ${currency.low_24h.toLocaleString('en-US')}
                             </div>
 
                         </Col>
@@ -160,7 +159,7 @@ const ViewChart_ = ({ currency }: IProps) => {
                         </Col>
                         <Col span={12} className="right">
 
-                            $ {currency.market_cap.toFixed(2).toLocaleString()}
+                            $ {currency.market_cap.toLocaleString('en-US')}
                             <br />
                             <div>
                                 {currency.market_cap_change_percentage_24h < 0 ? <span style={{ color: "#ea3943" }}><CaretDownFilled translate={undefined} />{currency.market_cap_change_percentage_24h.toFixed(2).toLocaleString()}%</span> :
@@ -188,7 +187,7 @@ const ViewChart_ = ({ currency }: IProps) => {
                         </Col>
                         <Col span={8} >
                             <div className="right">
-                                {currency.current_price}
+                                $ {currency.current_price.toLocaleString('en-US')}
                             </div>
                         </Col>
                     </Row>
@@ -211,8 +210,10 @@ const ViewChart_ = ({ currency }: IProps) => {
         <Row
             className="font-size-15 background-color-gray padding-10 margin-20 box-shadow"
         >
+            <div className="font-size-30">
+                {currency.name} <img src={currency.image} height={30} width={30} alt="" /> :
+            </div>
             <div dangerouslySetInnerHTML={{ __html: desc }} />
-
         </Row>
     </>
 }

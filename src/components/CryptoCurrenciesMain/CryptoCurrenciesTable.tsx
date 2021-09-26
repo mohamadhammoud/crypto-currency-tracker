@@ -3,9 +3,10 @@ import React from 'react'
 import { CaretDownFilled, CaretUpFilled, InfoCircleFilled, SignalFilled, StarOutlined } from "@ant-design/icons"
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { addCryptoCurrency } from '../Redux/actionTypes/actionTypes';
+import { addCryptoCurrency } from '../../Redux/actionTypes/actionTypes';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import CryptoCurrencyHistory from './CryptoCurrencyHistory';
 
 
 interface IProps {
@@ -88,7 +89,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'current_price',
             key: 'current_price',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 100 }}> $ {value.toFixed(2).toLocaleString()}</div>,
+            render: (value: number, row: any) => <div style={{ width: 100 }}> $ {value.toLocaleString('en-US')}</div>,
             sorter: (a: any, b: any) => a.current_price - b.current_price,
         },
         {
@@ -116,7 +117,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'market_cap',
             key: 'market_cap',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 220 }}> $ {value}</div>,
+            render: (value: number, row: any) => <div style={{ width: 220 }}> $ {value.toLocaleString('en-US')}</div>,
             sorter: (a: any, b: any) => a.market_cap - b.market_cap,
         },
         {
@@ -129,7 +130,7 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'total_volume',
             key: 'total_volume',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 150 }}> $ {value}</div>,
+            render: (value: number, row: any) => <div style={{ width: 150 }}> $ {value.toLocaleString('en-US')}</div>,
             sorter: (a: any, b: any) => a.total_volume - b.total_volume,
         },
         {
@@ -142,14 +143,13 @@ const CryptoCurrenciesTable = (props: IProps) => {
             dataIndex: 'circulating_supply',
             key: 'circulating_supply',
             align: 'center',
-            render: (value: number, row: any) => <div style={{ width: 240 }}> $ {value}</div>,
+            render: (value: number, row: any) => <div style={{ width: 240 }}> $ {value.toLocaleString('en-US')}</div>,
             sorter: (a: any, b: any) => a.circulating_supply - b.circulating_supply,
         },
     ] as any;
 
     return (
         <>
-
             <div className={props.className}>
                 <div className="margin-top-10 margin-bottom-10">
                     <span className='header-label'> {props.title}:</span>
